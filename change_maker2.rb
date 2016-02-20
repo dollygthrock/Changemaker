@@ -1,20 +1,17 @@
 def change_maker(cents)
 	total = {"quarters" => 0, "dimes" => 0, "nickels" => 0, "pennies" => 0}
-
-	if cents >= 15
+	dimes = 10
+	nickels = 5
+	pennies = 1
+	if cents >= dimes
 		total["dimes"] = 1
+		cents = cents - dimes
+	end 
+	if cents >= nickels
 		total["nickels"] = 1
-		cents = cents - 15
-		total["pennies"] = cents
-	elsif cents >= 10
-		total["dimes"] = 1
-		cents = cents - 10
-		total["pennies"] = cents
-	elsif cents >= 5
-		total["nickels"] = 1
-		cents = cents - 5
-		total["pennies"] = cents
-	else
+		cents = cents - nickels
+	end
+	if cents >= pennies
 		total["pennies"] = cents
 	end
 	total
