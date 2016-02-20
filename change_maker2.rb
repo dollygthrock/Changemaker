@@ -3,8 +3,11 @@ def change_maker(cents)
 
 	if cents >= 5
 	total["nickels"] = 1
+	cents = cents - 5
+	total["pennies"] = cents
 	else
 	total["pennies"] = cents
+
 
 	end
 	total
