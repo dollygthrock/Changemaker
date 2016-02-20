@@ -47,7 +47,9 @@ class TestChangeMaker < Minitest::Test
 		assert_equal({"quarters" => 1, "dimes" => 0, "nickels" => 0, "pennies" => 0}, change_maker(25))
 	end
 
-
+	def test_change_is_94
+		total = {"quarters" => 3, "dimes" => 1, "nickels" => 1, "pennies" => 4}
+	end
 
 
 
