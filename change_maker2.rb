@@ -3,8 +3,8 @@ def change_maker(cents)
 	dimes = 10
 	nickels = 5
 	pennies = 1
-	if cents >= dimes
-		total["dimes"] = 1
+	while cents >= dimes
+		total["dimes"] = total["dimes"] + 1
 		cents = cents - dimes
 	end 
 	if cents >= nickels
