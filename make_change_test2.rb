@@ -31,6 +31,11 @@ class TestChangeMaker < Minitest::Test
 		assert_equal({"quarters" => 0, "dimes" => 1, "nickels" => 0, "pennies" => 2}, change_maker(12))
 	end
 
+	def test_change_is_15
+		assert_equal({"quarters" => 0, "dimes" => 1, "nickels" => 5, "pennies" => 0}, change_maker(15))
+	end
+
+
 
 
 end
